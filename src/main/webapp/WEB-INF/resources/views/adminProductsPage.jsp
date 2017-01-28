@@ -1,3 +1,4 @@
+<%@include file="/WEB-INF/resources/views/header.jsp"%>
 
 
 <div class="container">
@@ -68,6 +69,5 @@
     <%@include file="resources/js/bootstrap.min.js"%>
 </script>
 
-</body>
-</html>
+
 

@@ -41,12 +41,6 @@
         </div><!--/.sidebar-offcanvas-->
     </div><!--/row-->
 
-    <hr>
-
-    <footer>
-        <p>&copy; 2016 Company, Inc.</p>
-    </footer>
-
 </div><!--/.container-->
 
 
@@ -61,6 +55,5 @@
 <script>
     <%@include file="resources/js/offcanvas.js"%>
 </script>
-</body>
-</html>
+
 

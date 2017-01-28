@@ -5,22 +5,24 @@
 <div class="container">
 
     <div class="row row-offcanvas row-offcanvas-right">
-
         <div class="col-xs-12 col-sm-9">
+
             <p class="pull-right visible-xs">
                 <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
             </p>
             <div class="jumbotron">
-                <h1>Categories page</h1>
+                <h1>Products Page</h1>
                 <p>Description of products</p>
             </div>
             <div class="row">
-                <c:forEach var="category" items="${categories}">
+                <c:forEach var="product" items="${products}">
                     <div class="col-xs-6 col-lg-4">
-                        <a href="/products?category=${category.name}">
-                            <h2><c:out value="${category.name}"/></h2>
+                        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="180" height="180">
+                        <a href="/product?name=${product.name}">
+                            <h2><c:out value="${product.name}"/></h2>
                         </a>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                        <p><c:out value="${product.description}"/> </p>
+                        <h3><c:out value="${product.price}"/> </h3>
                         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
                     </div><!--/.col-xs-6.col-lg-4-->
                 </c:forEach>
@@ -29,6 +31,18 @@
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
             <div class="list-group">
+                <c:forEach var="name" items="${categories}">
+                    <c:if test="${name==category.name}">
+                        <a href="/product?name=${category}" class="list-group-item active">
+                            <c:out value="${category.name}"/>
+                        </a>
+                    </c:if>
+                    <c:if test="${name!=category.name}">
+                        <a href="/products?name=${name}" class="list-group-item">
+                            <c:out value="${name}"/>
+                        </a>
+                    </c:if>
+                </c:forEach>
                 <a href="#" class="list-group-item active">Link</a>
                 <a href="#" class="list-group-item">Link</a>
                 <a href="#" class="list-group-item">Link</a>
@@ -42,12 +56,6 @@
             </div>
         </div><!--/.sidebar-offcanvas-->
     </div><!--/row-->
-
-    <hr>
-
-    <footer>
-        <p>&copy; 2016 Company, Inc.</p>
-    </footer>
 
 </div><!--/.container-->
 
@@ -63,6 +71,5 @@
 <script>
     <%@include file="resources/js/offcanvas.js"%>
 </script>
-</body>
-</html>
+
 

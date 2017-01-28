@@ -24,7 +24,3 @@
 
 </div> <!-- /container -->
 
-
-
-</body>
-</html>
