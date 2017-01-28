@@ -25,9 +25,9 @@ public class AbstractDao<T> implements GenericDao<T> {
     }
 
     @Override
-    public T read(Class<T> tClass, Integer id) {
+    public T read(Class<T> tClass, Long id) {
         Session session = sessionFactory.getCurrentSession();
-        T t =  (T) session.get(tClass, id);
+        T t = (T) session.get(tClass, id);
         session.flush();
         return t;
     }
