@@ -1,4 +1,6 @@
 package com.easystartinit.java_oct_16.dao.interfaces;
 
-public interface CategoryDao {
+import com.easystartinit.java_oct_16.model.Category;
+
+public interface CategoryDao extends GenericDao<Category>{
 }
