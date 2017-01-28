@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: root
-  Date: 04.12.16
-  Time: 0:55
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@include file="/WEB-INF/resources/views/header.jsp"%>
 
 <div class="container">

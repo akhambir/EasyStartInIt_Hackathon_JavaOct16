@@ -44,16 +44,6 @@
                         </a>
                     </c:if>
                 </c:forEach>
-                <a href="#" class="list-group-item active">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
             </div>
         </div><!--/.sidebar-offcanvas-->
     </div><!--/row-->
@@ -67,10 +57,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script>
-    <%@include file="resources/js/bootstrap.min.js"%>
+    <%@include file="../js/bootstrap.min.js"%>
 </script>
 <script>
-    <%@include file="resources/js/offcanvas.js"%>
+    <%@include file="../js/offcanvas.js"%>
 </script>
 
 
