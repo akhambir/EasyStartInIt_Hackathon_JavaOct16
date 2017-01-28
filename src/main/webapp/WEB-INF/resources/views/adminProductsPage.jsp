@@ -1,6 +1,4 @@
-<%@include file="/WEB-INF/resources/views/header.jsp"%>
 
-<%@include file="resources/css/offcanvas.css"%>
 
 <div class="container">
 
@@ -24,6 +22,9 @@
                         <p><c:out value="${product.description}"/> </p>
                         <h3><c:out value="${product.price}"/> </h3>
                         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+
+                        <% //TODO - add EDIT & DELETE button %>
+
                     </div><!--/.col-xs-6.col-lg-4-->
                 </c:forEach>
             </div><!--/row-->
@@ -56,27 +57,17 @@
             </div>
         </div><!--/.sidebar-offcanvas-->
     </div><!--/row-->
-
-    <hr>
-
-    <footer>
-        <p>&copy; 2016 Company, Inc.</p>
-    </footer>
-
-</div><!--/.container-->
+</div> <!-- /container -->
 
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
+<!-- Bootstrap core JavaScript-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
 <script>
     <%@include file="resources/js/bootstrap.min.js"%>
 </script>
-<script>
-    <%@include file="resources/js/offcanvas.js"%>
-</script>
+
 </body>
 </html>
 

@@ -1,32 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: root
-  Date: 01.12.16
-  Time: 21:52
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+<%@include file="/WEB-INF/resources/views/header.jsp"%>
 
-    <title>Please Sign In</title>
-
-    <style>
-        <%@include file="/resources/css/bootstrap.min.css"%>
-        <%@include file="resources/css/login.css"%>
-    </style>
-
-
-</head>
-
-<body>
+<%@include file="resources/css/login.css"%>
 
 <div class="container">
 

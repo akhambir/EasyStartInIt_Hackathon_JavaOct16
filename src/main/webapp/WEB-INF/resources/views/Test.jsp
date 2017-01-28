@@ -1,11 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: root
-  Date: 04.12.16
-  Time: 0:55
-  To change this template use File | Settings | File Templates.
---%>
+
+
 <%@include file="/WEB-INF/resources/views/header.jsp"%>
+
 
 <div class="container">
 
@@ -26,10 +22,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 
-<script>
-    <%@include file="resources/js/bootstrap.min.js"%>
-</script>
-
-</body>
-</html>
 
