@@ -113,12 +113,12 @@
             <version>${jstl.version}</version>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>sql-maven-plugin</artifactId>
             <version>${sql-maven-plugin.version}</version>
         </dependency>
-
+-->
     </dependencies>
 
     <build>
@@ -133,9 +133,11 @@
                 </configuration>
             </plugin>
 
-            <plugin>
+            <!--<plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>sql-maven-plugin</artifactId>
+                <version>3.0.0-SNAPSHOT</version>
+
 
                 <configuration>
                     <driver>org.postgresql.Driver</driver>
@@ -163,7 +165,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 
