@@ -17,4 +17,9 @@ public class CategoryServiceImpl implements CategoryService {
     public List<Category> getAll() {
         return categoryDao.readAll(Category.class);
     }
+
+    public Category create(Category category) {
+        return categoryDao.create(category);
+    }
+
 }

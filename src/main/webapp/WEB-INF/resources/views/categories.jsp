@@ -24,6 +24,12 @@
                         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
                     </div><!--/.col-xs-6.col-lg-4-->
                 </c:forEach>
+
+                <sec:authorize access="hasRole('ROLE_ADMIN')">
+                    <p>
+                        <a class="btn btn-lg btn-primary" href="/addCategory" role="button">Create new category</a>
+                    </p>
+                </sec:authorize>
             </div><!--/row-->
         </div><!--/.col-xs-12.col-sm-9-->
     </div><!--/row-->
