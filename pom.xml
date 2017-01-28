@@ -18,6 +18,7 @@
         <taglibs.version>1.1.2</taglibs.version>
         <jstl.version>1.2</jstl.version>
         <hsqldb.version>2.3.2</hsqldb.version>
+        <sql-maven-plugin.version>1.5</sql-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -71,6 +72,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>${security.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate.version}</version>
@@ -106,12 +113,12 @@
             <version>${jstl.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-taglibs</artifactId>
-            <version>3.2.3.RELEASE</version>
+        <!--<dependency>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>sql-maven-plugin</artifactId>
+            <version>${sql-maven-plugin.version}</version>
         </dependency>
-
+-->
     </dependencies>
 
     <build>
@@ -125,6 +132,40 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <!--<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sql-maven-plugin</artifactId>
+                <version>3.0.0-SNAPSHOT</version>
+
+
+                <configuration>
+                    <driver>org.postgresql.Driver</driver>
+                    <url>jdbc:postgressql://localhost:5432:shop</url>
+                    <username>postgres</username>
+                    <password>postgres</password>
+                    <settingsKey>sensibleKey</settingsKey>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <id>create-data</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <orderFile>ascending</orderFile>
+                            <fileset>
+                                <basedir>${basedir}</basedir>
+                                <includes>
+                                    <include>src/main/webapp/WEB-INF/db_init.sql</include>
+                                </includes>
+                            </fileset>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>-->
         </plugins>
     </build>
 
