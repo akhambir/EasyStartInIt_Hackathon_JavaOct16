@@ -24,7 +24,7 @@
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
             <div class="list-group">
-                <c:forEach var="name" items="${nameOfProducts}">
+                <c:forEach var="name" items="${products}">
                     <c:if test="${name==product.name}">
                         <a href="/product?name=${name}" class="list-group-item active">
                             <c:out value="${name}"/>
@@ -57,3 +57,4 @@
 </script>
 
 
+<%@include file="/WEB-INF/resources/views/footer.jsp"%>

@@ -25,3 +25,4 @@
 
 </div> <!-- /container -->
 
+<%@include file="/WEB-INF/resources/views/footer.jsp"%>
