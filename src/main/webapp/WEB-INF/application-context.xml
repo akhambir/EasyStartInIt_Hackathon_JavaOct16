@@ -42,7 +42,9 @@
             password-parameter="password"
             login-processing-url="/j_spring_security_check"
             />
-        <security:logout logout-success-url="/login?logout"/>
+        <security:logout
+                logout-url="/j_spring_security_logout"
+                logout-success-url="/login?logout"/>
         <security:csrf/>
     </security:http>
 

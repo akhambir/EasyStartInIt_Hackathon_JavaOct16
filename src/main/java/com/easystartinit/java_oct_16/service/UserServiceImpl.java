@@ -13,6 +13,8 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     public User addUser(User user) {
-        return userDao.create(user);
+        User addedUser = userDao.create(user);
+        userDao.createStandardRole(user);
+        return addedUser;
     }
 }

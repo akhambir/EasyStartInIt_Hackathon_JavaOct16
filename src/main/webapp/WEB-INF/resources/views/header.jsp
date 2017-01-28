@@ -50,7 +50,10 @@
                 </sec:authorize>
                 <sec:authorize access="isAuthenticated()">
                     <li>${pageContext.request.userPrincipal.name}</li>
-                    <li><a href="/j_spring_security_logout">Log Out</a></li>
+                    <form action="/j_spring_security_logout" method="post">
+                        <input type="submit" value="Log Out">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                    </form>
                 </sec:authorize>
             </ul>
         </div><!--/.nav-collapse -->
