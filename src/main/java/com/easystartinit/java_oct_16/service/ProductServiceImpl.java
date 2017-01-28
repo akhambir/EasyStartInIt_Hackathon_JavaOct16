@@ -5,14 +5,23 @@ import com.easystartinit.java_oct_16.model.Product;
 import com.easystartinit.java_oct_16.service.interfaces.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
+import java.util.Properties;
 
 @Service
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductDao productDao;
+
+    @Autowired
+    private ImageService imageService;
 
     public List<Product> getAll() {
         return productDao.readAll(Product.class);
@@ -24,8 +33,18 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product read(Integer id) {
+    public Product read(Long id) {
         return productDao.read(Product.class, id);
+    }
+
+    @Override
+    public Product create(Product product) {
+        return productDao.create(product);
+    }
+
+    @Override
+    public boolean saveImage(MultipartFile multipartFile, String fileName) {
+        return imageService.saveImage(multipartFile,  "products/" + fileName);
     }
 
 

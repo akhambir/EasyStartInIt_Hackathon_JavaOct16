@@ -21,4 +21,9 @@
     </bean>
     <mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"/>
     <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+    </bean>
+
 </beans>

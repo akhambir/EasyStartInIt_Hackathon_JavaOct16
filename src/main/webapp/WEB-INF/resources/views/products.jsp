@@ -50,6 +50,11 @@
 
 </div><!--/.container-->
 
+<sec:authorize access="hasRole('ROLE_ADMIN')">
+    <a href="<c:url value="/addProduct"/>">Add New Product</a>
+</sec:authorize>
+
+
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

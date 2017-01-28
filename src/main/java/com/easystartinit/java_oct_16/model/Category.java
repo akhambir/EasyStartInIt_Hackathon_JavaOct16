@@ -10,7 +10,7 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false, unique = true)
+    @Column(name = "category_id", nullable = false, unique = true)
     private Long id;
 
     @Column(name = "name", nullable = false, unique = true)
@@ -18,6 +18,9 @@ public class Category {
 
     @Column(name = "description")
     private String description;
+
+    @Column(name = "image")
+    private String image;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
     private Set<Product> products = new HashSet<Product>(0);
@@ -52,5 +55,13 @@ public class Category {
 
     public void setProducts(Set<Product> products) {
         this.products = products;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
