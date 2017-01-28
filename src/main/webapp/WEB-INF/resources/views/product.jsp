@@ -1,7 +1,7 @@
 <%@include file="/WEB-INF/resources/views/header.jsp"%>
-
+<style>
 <%@include file="resources/css/offcanvas.css"%>
-
+</style>
 <div class="container">
 
     <div class="row row-offcanvas row-offcanvas-right">

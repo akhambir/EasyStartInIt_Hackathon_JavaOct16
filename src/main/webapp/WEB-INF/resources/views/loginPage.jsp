@@ -1,7 +1,7 @@
 <%@include file="/WEB-INF/resources/views/header.jsp"%>
-
+<style>
 <%@include file="resources/css/login.css"%>
-
+</style>
 <div class="container">
 
     <form class="form-signin" action="SignIn" method="POST">
@@ -17,7 +17,7 @@
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
     </form>
-    <form class="form-signin" action="/SignUp">
+    <form class="form-signin" action="/registration">
         <p>For the first time on site?</p>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
     </form>

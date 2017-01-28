@@ -1,6 +1,7 @@
 <%@include file="/WEB-INF/resources/views/header.jsp"%>
-
+<style>
 <%@include file="resources/css/offcanvas.css"%>
+</style>
 
 <div class="container">
 
@@ -12,7 +13,7 @@
             </p>
             <div class="jumbotron">
                 <h1>Products Page</h1>
-                <p>Description of products</p>
+                <p>Description of products of this category</p>
             </div>
             <div class="row">
                 <c:forEach var="product" items="${products}">
