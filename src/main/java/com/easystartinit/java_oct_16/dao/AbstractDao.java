@@ -1,5 +1,6 @@
 package com.easystartinit.java_oct_16.dao;
 
+import com.easystartinit.java_oct_16.dao.interfaces.GenericDao;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package com.easystartinit.java_oct_16.controller;
 
-import com.easystartinit.java_oct_16.service.CategoryService;
-import com.easystartinit.java_oct_16.service.ProductService;
+import com.easystartinit.java_oct_16.service.CategoryServiceImpl;
+import com.easystartinit.java_oct_16.service.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class ProductController {
 
     @Autowired
-    private ProductService productService;
+    private ProductServiceImpl productService;
 
     @Autowired
-    private CategoryService categoryService;
+    private CategoryServiceImpl categoryService;
 
     @RequestMapping(value = "/products", method = RequestMethod.GET)
     public String getProductPage(Model model){

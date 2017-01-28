@@ -1,4 +1,4 @@
-package com.easystartinit.java_oct_16.dao;
+package com.easystartinit.java_oct_16.dao.interfaces;
 
 import java.util.List;
 
