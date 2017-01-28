@@ -21,7 +21,7 @@ public class Product {
     private Double price;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "categories.id")
+    @JoinColumn(name = "id", insertable = false, updatable = false)
     private Category category;
 
     public Long getId() {
