@@ -15,7 +15,7 @@ public class UserRoles {
     private String role;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "users.username")
+    @JoinColumn(name = "username")
     private User user;
 
     public Long getId() {

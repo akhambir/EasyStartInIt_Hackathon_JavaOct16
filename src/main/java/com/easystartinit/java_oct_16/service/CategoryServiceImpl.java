@@ -35,6 +35,6 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public boolean saveImage(MultipartFile multipartFile, String fileName) {
-        return imageService.saveImage(multipartFile, "/home/maxt28/Desktop/externalImages/"+fileName);
+        return imageService.saveImage(multipartFile, "categories/" + fileName);
     }
 }
