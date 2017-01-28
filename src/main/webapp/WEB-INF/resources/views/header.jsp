@@ -15,8 +15,8 @@
     <title>Main Page</title>
 
     <style>
-        <%@include file="resources/css/bootstrap.min.css"%>
-        <%@include file="resources/css/navbar-fixed-top.css"%>
+        <%@include file="../css/bootstrap.min.css"%>
+        <%@include file="../css/navbar-fixed-top.css"%>
     </style>
 </head>
 

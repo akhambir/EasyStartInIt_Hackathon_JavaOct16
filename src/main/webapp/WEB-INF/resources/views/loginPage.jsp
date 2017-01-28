@@ -1,6 +1,6 @@
 <%@include file="/WEB-INF/resources/views/header.jsp"%>
 <style>
-<%@include file="resources/css/login.css"%>
+<%@include file="../css/login.css"%>
 </style>
 <div class="container">
 
