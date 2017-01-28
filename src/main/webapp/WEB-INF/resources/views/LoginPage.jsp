@@ -19,8 +19,8 @@
     <title>Please Sign In</title>
 
     <style>
-        <%@include file="css/bootstrap.min.css"%>
-        <%@include file="css/loginCSS/signin.css"%>
+        <%@include file="/resources/css/bootstrap.min.css"%>
+        <%@include file="resources/css/login.css"%>
     </style>
 
 

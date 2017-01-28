@@ -20,8 +20,8 @@
     <title>Main Page</title>
 
     <style>
-        <%@include file="css/bootstrap.min.css"%>
-        <%@include file="css/mainCSS/navbar-fixed-top.css"%>
+        <%@include file="resources/css/bootstrap.min.css"%>
+        <%@include file="resources/css/navbar-fixed-top.css"%>
     </style>
 </head>
 
@@ -85,7 +85,7 @@
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 
 <script>
-    <%@include file="js/bootstrap.min.js"%>
+    <%@include file="resources/js/bootstrap.min.js"%>
 </script>
 
 </body>

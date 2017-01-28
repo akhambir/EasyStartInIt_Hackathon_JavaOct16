@@ -13,8 +13,8 @@
     <title>This is my Product Page</title>
 
     <style>
-        <%@include file="css/bootstrap.min.css"%>
-        <%@include file="css/productsCSS/offcanvas.css"%>
+        <%@include file="resources/css/bootstrap.min.css"%>
+        <%@include file="resources/css/offcanvas.css"%>
     </style>
 
 </head>
@@ -98,10 +98,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script>
-    <%@include file="js/bootstrap.min.js"%>
+    <%@include file="resources/js/bootstrap.min.js"%>
 </script>
 <script>
-    <%@include file="js/productsJS/offcanvas.js"%>
+    <%@include file="resources/js/offcanvas.js"%>
 </script>
 </body>
 </html>
