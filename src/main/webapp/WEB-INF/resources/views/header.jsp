@@ -18,6 +18,7 @@
     <style>
         <%@include file="../css/bootstrap.min.css"%>
         <%@include file="../css/navbar-fixed-top.css"%>
+        <%--<%@include file="../css/footer.css"%>--%>
     </style>
 </head>
 
