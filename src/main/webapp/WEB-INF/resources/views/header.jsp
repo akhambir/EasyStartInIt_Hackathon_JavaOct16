@@ -43,7 +43,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/login">Sign In</a></li>
-                <li><a href="/SignU">Sign Up<span class="sr-only">(current)</span></a></li>
+                <li><a href="/registration">Sign Up<span class="sr-only">(current)</span></a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

@@ -1,7 +1,7 @@
 <%@include file="/WEB-INF/resources/views/header.jsp"%>
-
+<style>
 <%@include file="resources/css/offcanvas.css"%>
-
+</style>
 <div class="container">
 
     <div class="row row-offcanvas row-offcanvas-right">
@@ -12,7 +12,7 @@
             </p>
             <div class="jumbotron">
                 <h1>Categories page</h1>
-                <p>Description of products</p>
+                <p>Description of our products</p>
             </div>
             <div class="row">
                 <c:forEach var="category" items="${categories}">
@@ -26,21 +26,6 @@
                 </c:forEach>
             </div><!--/row-->
         </div><!--/.col-xs-12.col-sm-9-->
-
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-            <div class="list-group">
-                <a href="#" class="list-group-item active">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-            </div>
-        </div><!--/.sidebar-offcanvas-->
     </div><!--/row-->
 
 </div><!--/.container-->
