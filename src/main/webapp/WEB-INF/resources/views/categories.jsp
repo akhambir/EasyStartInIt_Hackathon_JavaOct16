@@ -1,6 +1,6 @@
 <%@include file="/WEB-INF/resources/views/header.jsp"%>
 <style>
-<%@include file="resources/css/offcanvas.css"%>
+<%@include file="../css/offcanvas.css"%>
 </style>
 <div class="container">
 
@@ -37,9 +37,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script>
-    <%@include file="resources/js/bootstrap.min.js"%>
+    <%@include file="../js/bootstrap.min.js"%>
 </script>
 <script>
-    <%@include file="resources/js/offcanvas.js"%>
+    <%@include file="../js/offcanvas.js"%>
 </script>
 
