@@ -13,6 +13,11 @@
         <spring.version>4.3.5.RELEASE</spring.version>
         <security.version>3.2.3.RELEASE</security.version>
         <postgresql.version>9.4-1200-jdbc41</postgresql.version>
+        <hibernate.version>4.3.11.Final</hibernate.version>
+        <hibernate.persistance.version>1.0.0.Final</hibernate.persistance.version>
+        <taglibs.version>1.1.2</taglibs.version>
+        <jstl.version>1.2</jstl.version>
+        <hsqldb.version>2.3.2</hsqldb.version>
     </properties>
 
     <dependencies>
@@ -68,13 +73,13 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>4.3.11.Final</version>
+            <version>${hibernate.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
             <artifactId>hibernate-jpa-2.1-api</artifactId>
-            <version>1.0.0.Final</version>
+            <version>${hibernate.persistance.version}</version>
         </dependency>
 
         <dependency>
@@ -86,19 +91,19 @@
         <dependency>
             <groupId>taglibs</groupId>
             <artifactId>standard</artifactId>
-            <version>1.1.2</version>
+            <version>${taglibs.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
-            <version>2.3.2</version>
+            <version>${hsqldb.version}</version>
         </dependency>
 
         <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
-            <version>1.2</version>
+            <version>${jstl.version}</version>
         </dependency>
 
     </dependencies>
