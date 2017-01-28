@@ -69,5 +69,6 @@
     <%@include file="../js/bootstrap.min.js"%>
 </script>
 
+<%@include file="/WEB-INF/resources/views/footer.jsp"%>
 
 
