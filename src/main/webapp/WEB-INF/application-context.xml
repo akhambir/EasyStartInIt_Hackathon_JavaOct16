@@ -55,5 +55,7 @@
         </security:authentication-provider>
     </security:authentication-manager>
 
+    <bean id="defaultWebSecurityExpressionHandler"
+          class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler"/>
 
 </beans>
