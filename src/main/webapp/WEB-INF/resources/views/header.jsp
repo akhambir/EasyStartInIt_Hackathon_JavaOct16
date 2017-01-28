@@ -1,5 +1,6 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -42,8 +43,14 @@
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <sec:authorize access="isAnonymous()">
                 <li><a href="/login">Sign In</a></li>
                 <li><a href="/registration">Sign Up<span class="sr-only">(current)</span></a></li>
+                </sec:authorize>
+                <sec:authorize access="isAuthenticated()">
+                    <li>${pageContext.request.userPrincipal.name}</li>
+                    <li><a href="/j_spring_security_logout">Log Out</a></li>
+                </sec:authorize>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
