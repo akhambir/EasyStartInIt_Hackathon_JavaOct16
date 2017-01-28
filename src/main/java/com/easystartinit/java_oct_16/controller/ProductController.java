@@ -19,18 +19,19 @@ public class ProductController {
     private CategoryService categoryService;
 
     @RequestMapping(value = "/products", method = RequestMethod.GET)
-    public String getProductsPage(Model model) {
-        model.addAttribute("products", productService.getAll());
+    public String getProductsPage(@RequestParam("category") String category, Model model) {
+        model.addAttribute("products", productService.getProductsByCategory(category));
         model.addAttribute("categories", categoryService.getAll());
+        model.addAttribute("currentCategory", category);
         return "products";
     }
 
     @RequestMapping(value = "/product", method = RequestMethod.GET)
-    public String getProductPage(@RequestParam Model model) {
-
-        model.addAttribute("products", productService.getAll());
-        model.addAttribute("product", );
-
+    public String getProductPage(@RequestParam("id") String id,
+                                 @RequestParam("category") String category,
+                                 Model model) {
+        model.addAttribute("products", productService.getProductsByCategory(category));
+        model.addAttribute("product", productService.read(Integer.valueOf(id)));
         return "product";
     }
 }

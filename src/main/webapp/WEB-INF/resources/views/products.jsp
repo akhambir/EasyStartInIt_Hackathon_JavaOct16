@@ -19,7 +19,7 @@
                 <c:forEach var="product" items="${products}">
                     <div class="col-xs-6 col-lg-4">
                         <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="180" height="180">
-                        <a href="/product?name=${product.name}">
+                        <a href="/product?category=${currentCategory}&id=${product.id}">
                             <h2><c:out value="${product.name}"/></h2>
                         </a>
                         <p><c:out value="${product.description}"/> </p>
