@@ -1,5 +1,28 @@
-<%@include file="/WEB-INF/resources/views/header.jsp"%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Main Page</title>
+
+    <style>
+        <%@include file="resources/css/bootstrap.min.css"%>
+        <%@include file="resources/css/navbar-fixed-top.css"%>
+    </style>
+</head>
+
+<body>
+
+<!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -36,30 +59,3 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-
-<div class="container">
-
-    <!-- Main component for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <h1>Admin Page</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View our products &raquo;</a>
-        </p>
-    </div>
-
-</div> <!-- /container -->
-
-
-<!-- Bootstrap core JavaScript-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-
-<script>
-    <%@include file="resources/js/bootstrap.min.js"%>
-</script>
-
-</body>
-</html>
-
