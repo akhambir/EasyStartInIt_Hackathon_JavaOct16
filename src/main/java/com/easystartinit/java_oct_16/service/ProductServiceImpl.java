@@ -2,17 +2,13 @@ package com.easystartinit.java_oct_16.service;
 
 import com.easystartinit.java_oct_16.dao.interfaces.ProductDao;
 import com.easystartinit.java_oct_16.model.Product;
+import com.easystartinit.java_oct_16.service.interfaces.ImageService;
 import com.easystartinit.java_oct_16.service.interfaces.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
-import java.util.Properties;
 
 @Service
 public class ProductServiceImpl implements ProductService {

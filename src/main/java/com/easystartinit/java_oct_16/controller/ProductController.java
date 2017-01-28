@@ -1,7 +1,7 @@
 package com.easystartinit.java_oct_16.controller;
 
 import com.easystartinit.java_oct_16.model.Product;
-import com.easystartinit.java_oct_16.service.ImageService;
+import com.easystartinit.java_oct_16.service.interfaces.ImageService;
 import com.easystartinit.java_oct_16.service.interfaces.CategoryService;
 import com.easystartinit.java_oct_16.service.interfaces.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;

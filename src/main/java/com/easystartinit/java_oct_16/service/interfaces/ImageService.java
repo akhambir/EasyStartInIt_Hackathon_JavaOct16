@@ -1,4 +1,4 @@
-package com.easystartinit.java_oct_16.service;
+package com.easystartinit.java_oct_16.service.interfaces;
 
 import org.springframework.web.multipart.MultipartFile;
 

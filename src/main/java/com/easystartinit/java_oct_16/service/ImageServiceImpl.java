@@ -1,5 +1,6 @@
 package com.easystartinit.java_oct_16.service;
 
+import com.easystartinit.java_oct_16.service.interfaces.ImageService;
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
