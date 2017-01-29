@@ -10,7 +10,7 @@ body {
     padding: 0 0 0 0;
     height: 100%;
     background-color: #fff;
-    color: #fff;
+    color: #5e5e5e;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0,0,0,.5);
     min-height: 100%;
@@ -20,16 +20,16 @@ body {
 a,
 a:focus,
 a:hover {
-    color: #fff;
+    color: #286090;
 }
 
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-    color: #333;
+    color: white;
     text-shadow: none;
-    background-color: #fff;
-    border: 1px solid #fff;
+    background-color: #286090;
+    border: 1px solid black;
 }
 
 /* --------------------------------------------- | header style |--------------------------------------------- */
@@ -71,12 +71,17 @@ a:hover {
 /* --------------------------------------------- | container style |--------------------------------------------- */
 
 .container .jumbotron, .container-fluid .jumbotron {
-    margin: 70px 0 0 0;
+    margin: 70px 0 20px 0;
+}
+
+.jumbotron h1 {
+    color: #286090;
 }
 
 .cover {
     padding: 0 20px;
 }
+
 .cover .btn-lg {
     padding: 10px 20px;
     font-weight: bold;
@@ -87,6 +92,7 @@ a:hover {
     max-width: 680px;
     padding: 0 15px;
 }
+
 .container .text-muted {
     margin: 20px 0;
 }
@@ -96,13 +102,16 @@ a:hover {
     padding: 15px;
     margin: 0 auto;
 }
+
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
     margin-bottom: 10px;
 }
+
 .form-signin .checkbox {
     font-weight: normal;
 }
+
 .form-signin .form-control {
     position: relative;
     height: auto;
@@ -112,14 +121,17 @@ a:hover {
     padding: 10px;
     font-size: 16px;
 }
+
 .form-signin .form-control:focus {
     z-index: 2;
+
 }
 .form-signin input[type="email"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
+
 .form-signin input[type="password"] {
     margin-bottom: 10px;
     border-top-left-radius: 0;
@@ -154,13 +166,16 @@ a:hover {
     padding: 15px;
     margin: 0 auto;
 }
+
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
     margin-bottom: 10px;
 }
+
 .form-signin .checkbox {
     font-weight: normal;
 }
+
 .form-signin .form-control {
     position: relative;
     height: auto;
@@ -170,14 +185,17 @@ a:hover {
     padding: 10px;
     font-size: 16px;
 }
+
 .form-signin .form-control:focus {
     z-index: 2;
 }
+
 .form-signin input[type="email"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
+
 .form-signin input[type="password"] {
     margin-bottom: 10px;
     border-top-left-radius: 0;
@@ -187,7 +205,7 @@ a:hover {
 
 /* --------------------------------------------- | table style |--------------------------------------------- */
 
-.site-wrapper {
+/*.site-wrapper {
     display: table;
     width: 100%;
     height: 100%;
@@ -195,6 +213,7 @@ a:hover {
     -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
     box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
+
 .site-wrapper-inner {
     display: table-cell;
     vertical-align: top;
@@ -232,7 +251,7 @@ a:hover {
 .mastfoot {
     color: #999;
     color: rgba(255,255,255,.5);
-}
+}*/
 
 /* --------------------------------------------- | footer style |--------------------------------------------- */
 
@@ -242,7 +261,8 @@ a:hover {
     bottom: 0;
     width: 100%;
     height: 60px;
-    background-color: #7300e6;
+    background-color: #f8f8f8;
+    border-top: 1px solid #e7e7e7;
 }
 
 .footer p {

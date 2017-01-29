@@ -12,4 +12,8 @@ public class HomeController {
         return "homePage";
     }
 
+    @RequestMapping(value = "/contacts", method = RequestMethod.GET)
+    public String getContact(){
+        return "contacts";
+    }
 }

@@ -1,7 +1,9 @@
 <%@include file="/WEB-INF/resources/views/header.jsp"%>
+
 <style>
 <%@include file="../css/offcanvas.css"%>
 </style>
+
 <div class="container">
 
     <div class="row row-offcanvas row-offcanvas-right">
@@ -49,12 +51,10 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
 <script>
     <%@include file="../js/bootstrap.min.js"%>
-</script>
-<script>
     <%@include file="../js/offcanvas.js"%>
 </script>
-
 
 <%@include file="/WEB-INF/resources/views/footer.jsp"%>

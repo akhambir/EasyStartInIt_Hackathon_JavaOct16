@@ -24,8 +24,6 @@
                         <h3><c:out value="${product.price}"/> </h3>
                         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 
-                        <% //TODO - add EDIT & DELETE button %>
-
                     </div><!--/.col-xs-6.col-lg-4-->
                 </c:forEach>
             </div><!--/row-->

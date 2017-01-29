@@ -5,10 +5,9 @@
     <!-- Main component for a primary marketing message or call to action -->
     <div class="jumbotron">
         <h1>Home Page</h1>
-        <p>Pozdravliayu, ono rabotaet</p>
-        <p>Naverno</p>
+        <p>Here you can see our new best products</p>
         <p>
-            <a class="btn btn-lg btn-primary" href="/categories" role="button">View our products &raquo;</a>
+            <a class="btn btn-lg btn-primary" href="/categories" role="button">View our categories &raquo;</a>
         </p>
     </div>
 
