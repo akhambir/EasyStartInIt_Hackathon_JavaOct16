@@ -28,10 +28,10 @@ public class Product {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "products")
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "productList")
     private List<Order> orderList;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "products")
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "productList")
     private List<User> userList;
 
     public List<Order> getOrderList() {
