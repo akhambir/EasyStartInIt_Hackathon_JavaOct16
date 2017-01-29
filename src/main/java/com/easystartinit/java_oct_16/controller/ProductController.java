@@ -30,6 +30,7 @@ public class ProductController {
         model.addAttribute("products", productService.getProductsByCategory(category));
         model.addAttribute("categories", categoryService.getAll());
         model.addAttribute("currentCategory", category);
+        model.addAttribute("rootPath", productService.getImagesRootPath());
         return "products";
     }
 
@@ -66,6 +67,7 @@ public class ProductController {
         product.setDescription(description);
         product.setPrice(price);
         productService.create(product);
+        model.addObject("categories", categoryService.getAll());
         return model;
     }
 }

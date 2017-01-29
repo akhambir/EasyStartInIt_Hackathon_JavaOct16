@@ -13,6 +13,8 @@ import java.util.List;
 @Service
 public class CategoryServiceImpl implements CategoryService {
 
+    private static final String FOLDER_PATH = "categories/";
+
     @Autowired
     private CategoryDao categoryDao;
 
@@ -35,6 +37,14 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public boolean saveImage(MultipartFile multipartFile, String fileName) {
-        return imageService.saveImage(multipartFile, "categories/" + fileName);
+        return imageService.saveImage(multipartFile, FOLDER_PATH + fileName);
+    }
+
+    public String getImagesRootPath(){
+        return imageService.getImagesRootPath() + FOLDER_PATH;
+    }
+
+    public Category update(Category category){
+        return categoryDao.update(category);
     }
 }

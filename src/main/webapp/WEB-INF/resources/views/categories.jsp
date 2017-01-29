@@ -17,17 +17,19 @@
             <div class="row">
                 <c:forEach var="category" items="${categories}">
                     <div class="col-xs-6 col-lg-4">
+                        <%--<img src="${rootPath}${category.image}"/>--%>
+                            <img class="img-circle" width="100px" height="100px" src="<c:url value="/images/categories/${category.image}"/>"/>
                         <a href="/products?category=${category.name}">
                             <h2><c:out value="${category.name}"/></h2>
                         </a>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <a href="/categories/update?category_id=${category.id}">Edit</a>
                         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
                     </div><!--/.col-xs-6.col-lg-4-->
                 </c:forEach>
 
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                     <p>
-                        <a class="btn btn-lg btn-primary" href="/addCategory" role="button">Create new category</a>
+                        <a class="btn btn-lg btn-primary" href="/createcategory" role="button">Create new category</a>
                     </p>
                 </sec:authorize>
             </div><!--/row-->

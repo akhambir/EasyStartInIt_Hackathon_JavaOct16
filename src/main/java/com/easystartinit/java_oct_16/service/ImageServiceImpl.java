@@ -19,6 +19,17 @@ public class ImageServiceImpl implements ImageService {
 
     @Override
     public boolean saveImage(MultipartFile multipartFile, String filePath) {
+        try {
+            byte[] bytes = multipartFile.getBytes();
+            FileUtils.writeByteArrayToFile(new File(getImagesRootPath()+filePath), bytes);
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public String getImagesRootPath(){
         Properties properties = new Properties();
         String rootPath = null;
         try {
@@ -28,13 +39,6 @@ public class ImageServiceImpl implements ImageService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try {
-            byte[] bytes = multipartFile.getBytes();
-            FileUtils.writeByteArrayToFile(new File(rootPath+filePath), bytes);
-            return true;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return false;
+        return rootPath;
     }
 }

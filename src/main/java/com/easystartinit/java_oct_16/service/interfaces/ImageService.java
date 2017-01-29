@@ -7,4 +7,7 @@ public interface ImageService {
     String generateName(String product, String imageName);
 
     boolean saveImage(MultipartFile multipartFile, String filePath);
+
+    String getImagesRootPath();
+
 }

@@ -13,6 +13,8 @@ import java.util.List;
 @Service
 public class ProductServiceImpl implements ProductService {
 
+    private static final String FOLDER_PATH = "products/";
+
     @Autowired
     private ProductDao productDao;
 
@@ -40,7 +42,11 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public boolean saveImage(MultipartFile multipartFile, String fileName) {
-        return imageService.saveImage(multipartFile,  "products/" + fileName);
+        return imageService.saveImage(multipartFile,  FOLDER_PATH + fileName);
+    }
+
+    public String getImagesRootPath(){
+        return imageService.getImagesRootPath() + FOLDER_PATH;
     }
 
 

@@ -19,7 +19,7 @@
         <property value="/WEB-INF/resources/views/" name="prefix"/>
         <property value=".jsp" name="suffix"/>
     </bean>
-    <mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"/>
+    <mvc:resources location="/static/images/" mapping="/images/**"/>
     <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
 
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>

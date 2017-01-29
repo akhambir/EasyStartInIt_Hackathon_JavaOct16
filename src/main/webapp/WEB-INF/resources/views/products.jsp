@@ -18,7 +18,7 @@
             <div class="row">
                 <c:forEach var="product" items="${products}">
                     <div class="col-xs-6 col-lg-4">
-                        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="180" height="180">
+                        <img width="100px" height="100px" class="img-circle" src="<c:url value="/images/products/${product.image}"/>"/>
                         <a href="/product?category=${currentCategory}&id=${product.id}">
                             <h2><c:out value="${product.name}"/></h2>
                         </a>
@@ -30,9 +30,9 @@
             </div><!--/row-->
         </div><!--/.col-xs-12.col-sm-9-->
 
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+        <%--<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
             <div class="list-group">
-                <c:forEach var="name" items="${categories}">
+                <c:forEach var="category" items="${categories}">
                     <c:if test="${name==category.name}">
                         <a href="/product?name=${category}" class="list-group-item active">
                             <c:out value="${category.name}"/>
@@ -45,7 +45,7 @@
                     </c:if>
                 </c:forEach>
             </div>
-        </div><!--/.sidebar-offcanvas-->
+        </div><!--/.sidebar-offcanvas-->--%>
     </div><!--/row-->
 
 </div><!--/.container-->

@@ -15,4 +15,7 @@ public interface CategoryService {
 
     boolean saveImage(MultipartFile multipartFile, String fileName);
 
+    String getImagesRootPath();
+
+    Category update(Category category);
 }
