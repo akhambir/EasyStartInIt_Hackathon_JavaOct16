@@ -25,30 +25,10 @@
                         <p><c:out value="${product.description}"/> </p>
                         <h3><c:out value="${product.price}"/> </h3>
                         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-                    </div><!--/.col-xs-6.col-lg-4-->
-                </c:forEach>
-            </div><!--/row-->
-        </div><!--/.col-xs-12.col-sm-9-->
-
-        <%--<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-            <div class="list-group">
-                <c:forEach var="category" items="${categories}">
-                    <c:if test="${name==category.name}">
-                        <a href="/product?name=${category}" class="list-group-item active">
-                            <c:out value="${category.name}"/>
-                        </a>
-                    </c:if>
-                    <c:if test="${name!=category.name}">
-                        <a href="/products?name=${name}" class="list-group-item">
-                            <c:out value="${name}"/>
-                        </a>
-                    </c:if>
+                    </div>
                 </c:forEach>
             </div>
-        </div><!--/.sidebar-offcanvas-->--%>
-    </div><!--/row-->
-
-</div><!--/.container-->
+        </div>
 
 
 <!-- Bootstrap core JavaScript

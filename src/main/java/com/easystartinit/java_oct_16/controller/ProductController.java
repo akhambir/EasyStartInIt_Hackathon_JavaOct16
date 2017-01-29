@@ -79,7 +79,7 @@ public class ProductController {
     }
 
     @RequestMapping(value = "/products/edit", method = RequestMethod.GET)
-    public ModelAndView editProduct(@RequestParam(value = "productId") Long productId) {
+    public ModelAndView updateProduct(@RequestParam(value = "productId") Long productId) {
         ModelAndView model = new ModelAndView("editProduct");
         Product product = productService.read(productId);
         model.addObject("product", product);
