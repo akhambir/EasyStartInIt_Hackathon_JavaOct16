@@ -30,6 +30,8 @@ a:hover {
     text-shadow: none;
     background-color: #286090;
     border: 1px solid black;
+    width: 60%;
+    margin-bottom: 5px;
 }
 
 /* --------------------------------------------- | header style |--------------------------------------------- */
@@ -74,7 +76,7 @@ a:hover {
     margin: 70px 0 20px 0;
 }
 
-.jumbotron h1 {
+.jumbotron h1, h2 {
     color: #286090;
 }
 
@@ -106,6 +108,7 @@ a:hover {
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
     margin-bottom: 10px;
+    margin-top: 70px;
 }
 
 .form-signin .checkbox {
@@ -120,6 +123,7 @@ a:hover {
     box-sizing: border-box;
     padding: 10px;
     font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .form-signin .form-control:focus {
@@ -127,15 +131,15 @@ a:hover {
 
 }
 .form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    margin-bottom: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 
 .form-signin input[type="password"] {
     margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .container-wrapper {
@@ -194,12 +198,6 @@ a:hover {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
 }
 
 

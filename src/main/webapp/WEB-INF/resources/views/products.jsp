@@ -1,18 +1,22 @@
 <%@include file="/WEB-INF/resources/views/header.jsp"%>
 <style>
-<%@include file="../css/offcanvas.css"%>
+    <%@include file="../css/stylesheet.css"%>
+
 </style>
 
 <div class="container">
 
     <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-xs-12 col-sm-9">
+        <div class="col-xs-12 col-sm-12">
 
             <p class="pull-right visible-xs">
                 <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
             </p>
             <div class="jumbotron">
                 <h1>${currentCategory}</h1>
+                <sec:authorize access="hasRole('ROLE_ADMIN')">
+                    <a href="/addProduct" class="btn btn-primary">Add Product</a>
+                </sec:authorize>
             </div>
             <div class="row">
                 <c:forEach var="product" items="${products}">
@@ -24,21 +28,13 @@
                         <p><c:out value="${product.description}"/> </p>
                         <h3><c:out value="${product.price}"/> </h3>
                         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-                    </div><!--/.col-xs-6.col-lg-4-->
+                    </div>
                 </c:forEach>
-            </div><!--/row-->
-            <sec:authorize access="hasRole('ROLE_ADMIN')">
-            <a href="/addProduct" class="btn btn-primary">Add Product</a>
-            </sec:authorize>
-        </div><!--/.col-xs-12.col-sm-9-->
-    </div><!--/row-->
+            </div>
+        </div>
+    </div>
+</div>
 
-</div><!--/.container-->
-
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script>

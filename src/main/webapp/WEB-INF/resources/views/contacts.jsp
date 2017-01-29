@@ -3,7 +3,8 @@
 
 <div class="container">
     <div class="jumbotron">
-        <h1>Group: EasyStartIn - Hackathon_Oct16</h1>
+        <h1>Group: EasyStartIn</h1>
+        <h2>Hackathon_Oct16</h2>
         <p>Teacher: Arya Stark</p>
         <p>Student: Artem</p>
         <p>Student: Max</p>

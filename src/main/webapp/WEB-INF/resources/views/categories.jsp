@@ -14,29 +14,27 @@
             <div class="jumbotron">
                 <h1>Categories page</h1>
                 <p>Description of our products</p>
-            </div>
-
-            <div class="row">
-                <c:forEach var="category" items="${categories}">
-                    <div class="col-xs-6 col-lg-4">
-                        <%--<img src="${rootPath}${category.image}"/>--%>
-                            <img class="img-circle" width="100px" height="100px" src="<c:url value="/images/categories/${category.image}"/>"/>
-                        <a href="/products?category=${category.name}">
-                            <h2><c:out value="${category.name}"/></h2>
-                        </a>
-                        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-                        <sec:authorize access="hasRole('ROLE_ADMIN')">
-                            <a class="btn btn-lg btn-primary" href="/categories/update?category_id=${category.id}" role="button">Edit category</a>
-                            <a class="btn btn-lg btn-primary" href="/categories/delete?categoryId=${category.id}" role="button">Delete category</a>
-                        </sec:authorize>
-                    </div>
-                </c:forEach>
 
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                     <p>
                         <a class="btn btn-lg btn-primary" href="/createcategory" role="button">Create new category</a>
                     </p>
                 </sec:authorize>
+
+            </div>
+
+            <div class="row">
+                <c:forEach var="category" items="${categories}">
+                    <div class="col-xs-6 col-lg-4">
+                            <img class="img-circle" width="100px" height="100px" src="<c:url value="/images/categories/${category.image}"/>"/>
+                            <h2><c:out value="${category.name}"/></h2>
+                        <p><a class="btn btn-default" href="/products?category=${category.name}" role="button">View details &raquo;</a></p>
+                        <sec:authorize access="hasRole('ROLE_ADMIN')">
+                            <a class="btn btn-default" href="/categories/update?category_id=${category.id}" role="button">Edit category</a>
+                            <a class="btn btn-default" href="/categories/delete?categoryId=${category.id}" role="button">Delete category</a>
+                        </sec:authorize>
+                    </div>
+                </c:forEach>
             </div>
         </div>
     </div>
