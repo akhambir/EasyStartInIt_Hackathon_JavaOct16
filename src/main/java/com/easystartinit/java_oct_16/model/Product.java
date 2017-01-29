@@ -1,6 +1,7 @@
 package com.easystartinit.java_oct_16.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "products")
@@ -24,10 +25,30 @@ public class Product {
     private String image;
 
     @ManyToOne(fetch = FetchType.LAZY)
-
     @JoinColumn(name = "category_id")
-
     private Category category;
+
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "products")
+    private List<Order> orderList;
+
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "products")
+    private List<User> userList;
+
+    public List<Order> getOrderList() {
+        return orderList;
+    }
+
+    public void setOrderList(List<Order> orderList) {
+        this.orderList = orderList;
+    }
+
+    public List<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
+    }
 
     public Long getId() {
         return id;
