@@ -77,7 +77,7 @@ public class CategoryController {
         return model;
     }
 
-    @RequestMapping(value = "/createcategory/delete", method = RequestMethod.POST)
+    @RequestMapping(value = "/categories/delete")
     public String deleteCategory(@RequestParam(value = "categoryId") Long categoryId, Model model) {
         model.addAttribute("message", "Category " + categoryId + "deleted");
         categoryService.delete(categoryService.read(categoryId));
