@@ -1,5 +1,9 @@
 <%@include file="/WEB-INF/resources/views/header.jsp"%>
 
+<style>
+    <%@include file="../css/stylesheet.css"%>
+</style>
+
 <div class="container">
 
     <div class="jumbotron">

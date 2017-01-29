@@ -1,5 +1,9 @@
 <%@include file="/WEB-INF/resources/views/header.jsp"%>
 
+<style>
+    <%@include file="../css/stylesheet.css"%>
+</style>
+
 <div class="container">
 
     <div class="jumbotron">
@@ -14,10 +18,10 @@
             <p>${message}</p>
 
             <label for="editCategoryName" class="sr-only">Category name</label>
-            <input type="text" name="name" id="editCategoryName" class="form-control" placeholder="Category name" required autofocus>
+            <input type="text" name="name" id="editCategoryName" class=".form-signin .form-control" placeholder="Category name" required autofocus>
 
             <label for="editCategoryDescription" class="sr-only">Description</label>
-            <input type="text" name="description" id="editCategoryDescription" class="form-control" placeholder="Description"><br>
+            <input type="text" name="description" id="editCategoryDescription" class=".form-signin .form-control" placeholder="Description"><br>
 
             <input type="file" name="image" class="form-control"><br>
 
