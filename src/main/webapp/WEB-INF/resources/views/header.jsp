@@ -22,8 +22,6 @@
 </head>
 
 <body>
-
-<!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -35,6 +33,7 @@
             </button>
             <a class="navbar-brand" href="/">Project name</a>
         </div>
+
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Home</a></li>
@@ -54,6 +53,6 @@
                     </form>
                 </sec:authorize>
             </ul>
-        </div><!--/.nav-collapse -->
+        </div>
     </div>
 </nav>

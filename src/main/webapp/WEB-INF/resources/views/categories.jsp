@@ -24,11 +24,10 @@
                         <a href="/products?category=${category.name}">
                             <h2><c:out value="${category.name}"/></h2>
                         </a>
-                            <a href="/categories/update?category_id=${category.id}">Edit</a>
                         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
                         <sec:authorize access="hasRole('ROLE_ADMIN')">
+                            <a class="btn btn-lg btn-primary" href="/categories/update?category_id=${category.id}" role="button">Edit category</a>
                             <a class="btn btn-lg btn-primary" href="/categories/delete?categoryId=${category.id}" role="button">Delete category</a>
-                            <a class="btn btn-lg btn-primary" href="/categories/edit?categoryId=${category.id}" role="button">Edit category</a>
                         </sec:authorize>
                     </div>
                 </c:forEach>
