@@ -41,6 +41,16 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public Product edit(Product product) {
+        return productDao.update(product);
+    }
+
+    @Override
+    public Product delete(Product product) {
+        return productDao.delete(product);
+    }
+
+    @Override
     public boolean saveImage(MultipartFile multipartFile, String fileName) {
         return imageService.saveImage(multipartFile,  FOLDER_PATH + fileName);
     }

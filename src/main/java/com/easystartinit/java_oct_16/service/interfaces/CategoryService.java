@@ -11,6 +11,10 @@ public interface CategoryService {
 
     Category create(Category category);
 
+    Category edit(Category category);
+
+    Category delete(Category category);
+
     Category read(Long id);
 
     boolean saveImage(MultipartFile multipartFile, String fileName);

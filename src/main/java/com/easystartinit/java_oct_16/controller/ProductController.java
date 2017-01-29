@@ -7,6 +7,7 @@ import com.easystartinit.java_oct_16.service.interfaces.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -70,5 +71,40 @@ public class ProductController {
         model.addObject("categories", categoryService.getAll());
         return model;
     }
+
+    @RequestMapping(value = "/products/delete", method = RequestMethod.POST)
+    public String deleteProduct(@RequestParam(value = "productId") Long productId, Model model) {
+        String productMessage = productService.delete(productService.read(productId)).getName();
+        model.addAttribute("message", "Product " + productMessage + " deleted");
+        return "products";
+    }
+
+    @RequestMapping(value = "/products/edit", method = RequestMethod.GET)
+    public ModelAndView editProduct(@RequestParam(value = "productId") Long productId) {
+        ModelAndView model = new ModelAndView("editProduct");
+        Product product = productService.read(productId);
+        model.addObject("product", product);
+        model.addObject("category", categoryService.getAll());
+        return model;
+    }
+
+    @RequestMapping(value = "/products/edit/update", method = RequestMethod.POST)
+    public String updateProduct(@ModelAttribute(value = "product") Product product,
+                                @RequestParam(value = "name") String name,
+                                @RequestParam(value = "description") String description,
+                                @RequestParam(value = "price") Double price,
+                                @RequestParam(value = "category.id") Long id,
+                                @RequestParam(value = "image") MultipartFile multipartFile) {
+        String fileName = imageService.generateName(name, multipartFile.getOriginalFilename());
+        productService.saveImage(multipartFile, fileName);
+        product.setCategory(categoryService.read(id));
+        product.setName(name);
+        product.setImage(fileName);
+        product.setDescription(description);
+        product.setPrice(price);
+        productService.edit(product);
+        return "products";
+    }
+
 }
 

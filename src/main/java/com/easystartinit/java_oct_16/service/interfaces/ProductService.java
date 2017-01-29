@@ -15,6 +15,10 @@ public interface ProductService {
 
     Product create(Product product);
 
+    Product edit(Product product);
+
+    Product delete(Product product);
+
     boolean saveImage(MultipartFile multipartFile, String fileName);
 
     String getImagesRootPath();
