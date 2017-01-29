@@ -44,4 +44,11 @@ public class UserController {
         model.addAttribute("newUser", userService.addUser(user));
         return "homePage";
     }
+
+    @RequestMapping(value = "/userpage", method = RequestMethod.GET)
+    public String getUserPage(@ModelAttribute Double totalPrice, Model model) {
+        model.addAttribute("price", totalPrice);
+        model.addAttribute("products", userService.getProductsFromBucket());
+        return "userPage";
+    }
 }
