@@ -2,6 +2,7 @@ package com.easystartinit.java_oct_16.model;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -23,6 +24,20 @@ public class User {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private Set<UserRoles> userRoles = new HashSet<UserRoles>(0);
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "bucket", joinColumns = {
+            @JoinColumn(name = "username", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "id", nullable = false, updatable = false)})
+    private List<Product> productList;
+
+    public List<Product> getProductList() {
+        return productList;
+    }
+
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
+    }
 
     public String getUsername() {
         return username;
