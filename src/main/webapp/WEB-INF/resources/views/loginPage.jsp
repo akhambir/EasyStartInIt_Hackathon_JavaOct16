@@ -8,12 +8,6 @@
 
         <h2 class="form-signin-heading">Login Page</h2>
 
-        <c:if test="${not empty error}">
-            <p>${error}</p>
-        </c:if>
-        <c:if test="${not empty logout}">
-            <p>${logout}</p>
-        </c:if>
 
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="text" name="username"  id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
@@ -29,6 +23,17 @@
         <p>For the first time on site?</p>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
     </form>
+
+    <c:if test="${not empty error}">
+        <div class="alert alert-danger" role="alert">
+            <p>${error}</p>
+        </div>
+    </c:if>
+    <c:if test="${not empty logout}">
+        <div class="alert alert-info" role="alert">
+            <p>${logout}</p>
+        </div>
+    </c:if>
 
 </div>
 

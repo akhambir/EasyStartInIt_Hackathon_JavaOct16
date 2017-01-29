@@ -12,8 +12,7 @@
                 <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
             </p>
             <div class="jumbotron">
-                <h1>Products Page</h1>
-                <p>Description of products of this category</p>
+                <h1>${currentCategory}</h1>
             </div>
             <div class="row">
                 <c:forEach var="product" items="${products}">

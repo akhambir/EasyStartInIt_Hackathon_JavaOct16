@@ -4,7 +4,7 @@
 <div class="container">
     <div class="jumbotron">
 <form style="color: #0f0f0f" action="/categories/update?_csrf=${_csrf.token}" method="POST" enctype="multipart/form-data">
-    <h2 class="form-signin-heading">New category</h2>
+    <h2 class="form-signin-heading">Edit category</h2>
     <div class="form-group">
     <label for="addCategoryName" class="sr-only">Category name</label>
     <input type="text" name="name" value="${category.name}"  id="addCategoryName" class="form-control" placeholder="New category" required autofocus>
