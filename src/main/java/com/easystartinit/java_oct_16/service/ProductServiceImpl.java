@@ -59,5 +59,10 @@ public class ProductServiceImpl implements ProductService {
         return imageService.getImagesRootPath() + FOLDER_PATH;
     }
 
+    @Override
+    public List<Product> getUserProducts(String userName) {
+        return productDao.getUserProducts(userName);
+    }
+
 
 }

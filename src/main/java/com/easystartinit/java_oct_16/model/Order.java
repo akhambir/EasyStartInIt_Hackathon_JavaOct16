@@ -14,7 +14,7 @@ public class Order {
     private Long order_id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "username")
     private User user;
 
     @Column(name = "order_date", nullable = false)

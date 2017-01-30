@@ -17,4 +17,9 @@ public class UserServiceImpl implements UserService {
         userDao.createStandardRole(user);
         return addedUser;
     }
+
+    @Override
+    public User getByName(String userName) {
+        return userDao.read(User.class, userName);
+    }
 }

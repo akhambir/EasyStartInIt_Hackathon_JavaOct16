@@ -6,6 +6,7 @@ import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -16,6 +17,13 @@ public class ProductDaoImpl extends AbstractDao<Product> implements ProductDao {
         String hql = "from Product where category.name = :category";
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
         query.setParameter("category", category);
+        return query.list();
+    }
+
+    public List<Product> getUserProducts(String userName){
+        String hql = "select User.productList from User where username = :username";
+        Query query = sessionFactory.getCurrentSession().createQuery(hql);
+        query.setString("username", userName);
         return query.list();
     }
 

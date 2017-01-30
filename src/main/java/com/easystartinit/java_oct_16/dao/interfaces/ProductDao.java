@@ -7,4 +7,6 @@ import java.util.List;
 public interface ProductDao extends GenericDao<Product> {
 
     List<Product> getProductsByCategory(String category);
+
+    List<Product> getUserProducts(String userName);
 }

@@ -22,4 +22,6 @@ public interface ProductService {
     boolean saveImage(MultipartFile multipartFile, String fileName);
 
     String getImagesRootPath();
+
+    List<Product> getUserProducts(String userName);
 }
