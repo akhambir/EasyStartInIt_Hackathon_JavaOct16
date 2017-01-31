@@ -4,6 +4,8 @@ import com.easystartinit.java_oct_16.model.User;
 import com.easystartinit.java_oct_16.service.interfaces.ProductService;
 import com.easystartinit.java_oct_16.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -53,11 +55,12 @@ public class UserController {
     }
 
     @RequestMapping(value = "/userpage", method = RequestMethod.GET)
-    public ModelAndView getUserPage(UserPrincipal userPrincipal) {
-        if (userPrincipal.getName() == null) {
+    public ModelAndView getUserPage() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (auth.getName() == null) {
             return new ModelAndView("/");
         }
-        User user = userService.getByName(userPrincipal.getName());
+        User user = userService.getByName(auth.getName());
         ModelAndView model = new ModelAndView("userPage");
         model.addObject("UserProducts", productService.getUserProducts(user.getUsername()));
         /*UserBucket bucket = userService.getBucketByUserName(user);

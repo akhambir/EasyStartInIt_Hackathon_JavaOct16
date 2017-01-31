@@ -13,15 +13,15 @@ import java.util.List;
 @Transactional
 public class ProductDaoImpl extends AbstractDao<Product> implements ProductDao {
 
-    public List<Product> getProductsByCategory(String category){
-        String hql = "from Product where category.name = :category";
+    public List<Product> getProductsByCategory(Long id){
+        String hql = "from Product where category.id = :id";
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
-        query.setParameter("category", category);
+        query.setParameter("id", id);
         return query.list();
     }
 
     public List<Product> getUserProducts(String userName){
-        String hql = "select User.productList from User where username = :username";
+        String hql = "from Order as order join order.productList where order.user.username = :username";
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
         query.setString("username", userName);
         return query.list();

@@ -10,6 +10,8 @@ public interface UserService {
     User addUser(User user);
 
     User getByName(String userName);
+
+    User update(User user);
     //UserBucket getBucketByUserName(User user);
     //Double getTotalPrice(List<Products> list);
 

@@ -22,12 +22,13 @@
                 <c:forEach var="product" items="${products}">
                     <div class="col-xs-6 col-lg-4">
                         <img width="100px" height="100px" class="img-circle" src="<c:url value="/images/products/${product.image}"/>"/>
-                        <a href="/product?category=${currentCategory}&id=${product.id}">
+                        <a href="/product?category=${currentCategory.id}&id=${product.id}">
                             <h2><c:out value="${product.name}"/></h2>
                         </a>
                         <p><c:out value="${product.description}"/> </p>
                         <h3><c:out value="${product.price}"/> </h3>
                         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        <p><a class="btn btn-default" href="/products?category=${currentCategory.id}&add_to_bucket_id=${product.id}" role="button">Add to bucket &raquo;</a></p>
                     </div>
                 </c:forEach>
             </div>

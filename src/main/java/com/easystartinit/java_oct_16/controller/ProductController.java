@@ -1,10 +1,14 @@
 package com.easystartinit.java_oct_16.controller;
 
 import com.easystartinit.java_oct_16.model.Product;
+import com.easystartinit.java_oct_16.model.User;
 import com.easystartinit.java_oct_16.service.interfaces.ImageService;
 import com.easystartinit.java_oct_16.service.interfaces.CategoryService;
 import com.easystartinit.java_oct_16.service.interfaces.ProductService;
+import com.easystartinit.java_oct_16.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+
 
 @Controller
 public class ProductController {
@@ -26,19 +31,29 @@ public class ProductController {
     @Autowired
     private ImageService imageService;
 
+    @Autowired
+    private UserService userService;
+
     @RequestMapping(value = "/products", method = RequestMethod.GET)
-    public String getProductsPage(@RequestParam("category") String category, Model model) {
-        model.addAttribute("products", productService.getProductsByCategory(category));
-        model.addAttribute("categories", categoryService.getAll());
-        model.addAttribute("currentCategory", category);
-        return "products";
+    public ModelAndView getProductsPage(@RequestParam("category") Long category_id,
+                                  @RequestParam(value = "add_to_bucket_id", required = false) Long id) {
+        ModelAndView model = new ModelAndView("products");
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        model.addObject("products", productService.getProductsByCategory(category_id));
+        model.addObject("categories", categoryService.getAll());
+        model.addObject("currentCategory", categoryService.read(category_id));
+        if (id != null) {
+            User user = userService.getByName(auth.getName());
+            Product product = productService.read(id);
+        }
+        return model;
     }
 
     @RequestMapping(value = "/product", method = RequestMethod.GET)
     public String getProductPage(@RequestParam("id") String id,
-                                 @RequestParam("category") String category,
+                                 @RequestParam("category") Long category_id,
                                  Model model) {
-        model.addAttribute("products", productService.getProductsByCategory(category));
+        model.addAttribute("products", productService.getProductsByCategory(category_id));
         model.addAttribute("product", productService.read(Long.valueOf(id)));
         return "product";
     }
